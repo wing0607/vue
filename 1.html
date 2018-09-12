@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+
+    <title>Title</title>
+</head>
+<body>
+<div id="vue-app">
+    <h1>{{greet('afternoon')}}</h1>
+    <p>Name:{{name}}<p>
+    <p>Job：{{job}}<p>
+    <a v-bind:href="website">web开发</a>
+    <input type="text" v-bind:value="job">
+   <P v-html="websiteTag"></P>
+    <button v-on:click="add">age++</button><button v-on:click="subtract">age--</button>
+    <button v-on:dblclick="add">age++</button><button v-on:dblclick="subtract">age--</button><span>{{age}}</span>
+    <div id="canvas" v-on:mousemove="updateXY">{{x}} ,{{y}}<span v-on:mousemove.stop="">stop moving</span></div>
+    <input type="text" v-model="tname"><span>{{tname}}</span>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
